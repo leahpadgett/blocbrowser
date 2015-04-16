@@ -9,11 +9,9 @@
 /* Begin PBXBuildFile section */
 		22C940341ADC9328001DA97F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C940331ADC9328001DA97F /* main.m */; };
 		22C940371ADC9328001DA97F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C940361ADC9328001DA97F /* AppDelegate.m */; };
-		22C9403A1ADC9328001DA97F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C940391ADC9328001DA97F /* ViewController.m */; };
-		22C9403D1ADC9328001DA97F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22C9403B1ADC9328001DA97F /* Main.storyboard */; };
 		22C9403F1ADC9328001DA97F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22C9403E1ADC9328001DA97F /* Images.xcassets */; };
-		22C940421ADC9328001DA97F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22C940401ADC9328001DA97F /* LaunchScreen.xib */; };
 		22C9404E1ADC9328001DA97F /* BLCBrowserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C9404D1ADC9328001DA97F /* BLCBrowserTests.m */; };
+		22C940591ADC9512001DA97F /* BLCWebBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C940581ADC9512001DA97F /* BLCWebBrowserViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +30,12 @@
 		22C940331ADC9328001DA97F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		22C940351ADC9328001DA97F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		22C940361ADC9328001DA97F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		22C940381ADC9328001DA97F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		22C940391ADC9328001DA97F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		22C9403C1ADC9328001DA97F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		22C9403E1ADC9328001DA97F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		22C940411ADC9328001DA97F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		22C940471ADC9328001DA97F /* BLCBrowserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BLCBrowserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22C9404C1ADC9328001DA97F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22C9404D1ADC9328001DA97F /* BLCBrowserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLCBrowserTests.m; sourceTree = "<group>"; };
+		22C940571ADC9512001DA97F /* BLCWebBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLCWebBrowserViewController.h; sourceTree = "<group>"; };
+		22C940581ADC9512001DA97F /* BLCWebBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLCWebBrowserViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,11 +79,9 @@
 			children = (
 				22C940351ADC9328001DA97F /* AppDelegate.h */,
 				22C940361ADC9328001DA97F /* AppDelegate.m */,
-				22C940381ADC9328001DA97F /* ViewController.h */,
-				22C940391ADC9328001DA97F /* ViewController.m */,
-				22C9403B1ADC9328001DA97F /* Main.storyboard */,
+				22C940571ADC9512001DA97F /* BLCWebBrowserViewController.h */,
+				22C940581ADC9512001DA97F /* BLCWebBrowserViewController.m */,
 				22C9403E1ADC9328001DA97F /* Images.xcassets */,
-				22C940401ADC9328001DA97F /* LaunchScreen.xib */,
 				22C940311ADC9328001DA97F /* Supporting Files */,
 			);
 			path = BLCBrowser;
@@ -163,11 +157,13 @@
 		22C940261ADC9328001DA97F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = BLC;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Leah Padgett";
 				TargetAttributes = {
 					22C9402D1ADC9328001DA97F = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = UF3U66NFP6;
 					};
 					22C940461ADC9328001DA97F = {
 						CreatedOnToolsVersion = 6.3;
@@ -199,8 +195,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22C9403D1ADC9328001DA97F /* Main.storyboard in Resources */,
-				22C940421ADC9328001DA97F /* LaunchScreen.xib in Resources */,
 				22C9403F1ADC9328001DA97F /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,9 +213,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22C9403A1ADC9328001DA97F /* ViewController.m in Sources */,
 				22C940371ADC9328001DA97F /* AppDelegate.m in Sources */,
 				22C940341ADC9328001DA97F /* main.m in Sources */,
+				22C940591ADC9512001DA97F /* BLCWebBrowserViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,25 +236,6 @@
 			targetProxy = 22C940481ADC9328001DA97F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		22C9403B1ADC9328001DA97F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				22C9403C1ADC9328001DA97F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		22C940401ADC9328001DA97F /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				22C940411ADC9328001DA97F /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		22C9404F1ADC9328001DA97F /* Debug */ = {
@@ -349,6 +324,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BLCBrowser/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -359,6 +335,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BLCBrowser/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
