@@ -124,30 +124,25 @@
     
     NSString *URLString = textField.text;
     
+    NSRange whiteSpaceRange = [URLString rangeOfCharacterFromSet:[NSCharacterSet whitespaceCharacterSet]];
+    
+    if (whiteSpaceRange.location != NSNotFound) {
+        NSLog(@"Found whitespace. Perform Google search");
+        NSString *newString = [URLString stringByReplacingOccurrencesOfString:@" " withString:@"+"];
+        URLString = [NSString stringWithFormat:@"google.com/search?q=%@", newString];
+    }
+    
     NSURL *URL = [NSURL URLWithString:URLString];
     
     if (!URL.scheme) {
-        
-        NSRange urlSpace = [URLString rangeOfString:@" "];
-        NSString *urlNoSpace = [URLString stringByReplacingOccurrencesOfString:@" " withString:@"+"];
-        
-        if (urlSpace.location != NSNotFound) {
-            
-            // The user typed a space so we assume it's a search engine query
-            URL = [NSURL URLWithString:[NSString stringWithFormat:@"http://www.google.com/search?q=%@", urlNoSpace]];
-            
-        } else {
-        }
-    
         // The user didn't type http: or https:
-        URL = [NSURL URLWithString: [NSString stringWithFormat:@"http://%@", URLString]];
+        URL = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@", URLString]];
     }
     
     if (URL) {
         NSURLRequest *request = [NSURLRequest requestWithURL:URL];
         [self.webview loadRequest:request];
     }
-    
     return NO;
 }
 
