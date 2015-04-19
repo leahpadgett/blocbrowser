@@ -12,6 +12,7 @@
 		22C9403F1ADC9328001DA97F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22C9403E1ADC9328001DA97F /* Images.xcassets */; };
 		22C9404E1ADC9328001DA97F /* BLCBrowserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C9404D1ADC9328001DA97F /* BLCBrowserTests.m */; };
 		22C940591ADC9512001DA97F /* BLCWebBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C940581ADC9512001DA97F /* BLCWebBrowserViewController.m */; };
+		22C9405C1AE3F5AE001DA97F /* BLCAwesomeFloatingToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C9405B1AE3F5AE001DA97F /* BLCAwesomeFloatingToolbar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,8 +35,10 @@
 		22C940471ADC9328001DA97F /* BLCBrowserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BLCBrowserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22C9404C1ADC9328001DA97F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22C9404D1ADC9328001DA97F /* BLCBrowserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLCBrowserTests.m; sourceTree = "<group>"; };
-		22C940571ADC9512001DA97F /* BLCWebBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLCWebBrowserViewController.h; sourceTree = "<group>"; };
-		22C940581ADC9512001DA97F /* BLCWebBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLCWebBrowserViewController.m; sourceTree = "<group>"; };
+		22C940571ADC9512001DA97F /* BLCWebBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLCWebBrowserViewController.h; path = BLCBrowser/BLCWebBrowserViewController.h; sourceTree = "<group>"; };
+		22C940581ADC9512001DA97F /* BLCWebBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLCWebBrowserViewController.m; path = BLCBrowser/BLCWebBrowserViewController.m; sourceTree = "<group>"; };
+		22C9405A1AE3F5AE001DA97F /* BLCAwesomeFloatingToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLCAwesomeFloatingToolbar.h; sourceTree = "<group>"; };
+		22C9405B1AE3F5AE001DA97F /* BLCAwesomeFloatingToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLCAwesomeFloatingToolbar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +62,10 @@
 		22C940251ADC9328001DA97F = {
 			isa = PBXGroup;
 			children = (
+				22C9405A1AE3F5AE001DA97F /* BLCAwesomeFloatingToolbar.h */,
+				22C9405B1AE3F5AE001DA97F /* BLCAwesomeFloatingToolbar.m */,
+				22C940571ADC9512001DA97F /* BLCWebBrowserViewController.h */,
+				22C940581ADC9512001DA97F /* BLCWebBrowserViewController.m */,
 				22C940301ADC9328001DA97F /* BLCBrowser */,
 				22C9404A1ADC9328001DA97F /* BLCBrowserTests */,
 				22C9402F1ADC9328001DA97F /* Products */,
@@ -79,8 +86,6 @@
 			children = (
 				22C940351ADC9328001DA97F /* AppDelegate.h */,
 				22C940361ADC9328001DA97F /* AppDelegate.m */,
-				22C940571ADC9512001DA97F /* BLCWebBrowserViewController.h */,
-				22C940581ADC9512001DA97F /* BLCWebBrowserViewController.m */,
 				22C9403E1ADC9328001DA97F /* Images.xcassets */,
 				22C940311ADC9328001DA97F /* Supporting Files */,
 			);
@@ -216,6 +221,7 @@
 				22C940371ADC9328001DA97F /* AppDelegate.m in Sources */,
 				22C940341ADC9328001DA97F /* main.m in Sources */,
 				22C940591ADC9512001DA97F /* BLCWebBrowserViewController.m in Sources */,
+				22C9405C1AE3F5AE001DA97F /* BLCAwesomeFloatingToolbar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +401,7 @@
 				22C940531ADC9328001DA97F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		22C940541ADC9328001DA97F /* Build configuration list for PBXNativeTarget "BLCBrowserTests" */ = {
 			isa = XCConfigurationList;
@@ -403,6 +410,7 @@
 				22C940561ADC9328001DA97F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
