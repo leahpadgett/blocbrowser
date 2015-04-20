@@ -22,6 +22,7 @@
 @property (nonatomic, strong) BLCAwesomeFloatingToolbar *awesomeToolbar;
 @property (nonatomic, assign) NSUInteger frameCount;
 
+
 @end
 
 @implementation BLCWebBrowserViewController
@@ -59,6 +60,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     
     self.edgesForExtendedLayout = UIRectEdgeNone;
     
@@ -197,5 +199,24 @@
         [self.webview reload];
     }
 }
+
+- (void) floatingToolbar:(BLCAwesomeFloatingToolbar *)toolbar didTryToPanWithOffset:(CGPoint)offset {
+    CGPoint startingPoint = toolbar.frame.origin;
+    CGPoint newPoint = CGPointMake(startingPoint.x + offset.x, startingPoint.y +offset.y);
+    
+    CGRect potentialNewFrame = CGRectMake(newPoint.x, newPoint.y, CGRectGetWidth(toolbar.frame), CGRectGetHeight(toolbar.frame));
+    
+    if (CGRectContainsRect(self.view.bounds, potentialNewFrame)) {
+        toolbar.frame = potentialNewFrame;
+    }
+}
+
+-(void)handlePinchWithGestureRecognizer:(UIPinchGestureRecognizer *)pinchGestureRecognizer{
+    self.webview.transform = CGAffineTransformScale(self.webview.transform, pinchGestureRecognizer.scale, pinchGestureRecognizer.scale);
+    
+    pinchGestureRecognizer.scale = 1.0;
+    
+}
+
 
 @end
