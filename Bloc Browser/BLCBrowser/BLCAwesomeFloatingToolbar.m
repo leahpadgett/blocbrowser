@@ -54,15 +54,12 @@
             
             NSUInteger currentTitleIndex = [self.currentTitles indexOfObject:currentTitle]; // 0 through 3
             NSString *titleForThisButton = [self.currentTitles objectAtIndex:currentTitleIndex];
-            UIColor *colorForThisButton = [self.colors objectAtIndex:currentTitleIndex];
+            UIColor *colorForThisLabel = [self.colors objectAtIndex:currentTitleIndex];
             
-        // Not sure how to change these button references
-            
-            button.textAlignment = NSTextAlignmentCenter;
-            button.font = [UIFont systemFontOfSize:10];
-            button.text = titleForThisLabel;
+            button.titleLabel.font = [UIFont systemFontOfSize:10];
+            [button setTitle:titleForThisButton forState:UIControlStateNormal];
+            button.titleLabel.textColor = [UIColor whiteColor];
             button.backgroundColor = colorForThisLabel;
-            button.textColor = [UIColor whiteColor];
             
             [buttonsArray addObject:button];
         }
@@ -87,6 +84,8 @@
         // Initiate long press gesture
         self.longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressFired:)];
         [self addGestureRecognizer:self.longPressGesture];
+        
+        
     }
     
     return self;
@@ -177,7 +176,14 @@
     }
 }
 
-// Long Press method implementation 
+// Long Press method implementation
+
+- (void) longPressFired:(UILongPressGestureRecognizer *)recognizer {
+    
+    if (_buttons.backgroundColor == [UIColor redColor]) {
+        
+    }
+}
 
 
 
